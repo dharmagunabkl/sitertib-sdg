@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - SITERTIB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SITERTIB</h1>
+    <p class="tagline">Sistem Penomoran Surat Tertib dan Teratur</p>
+    <h2 id="greeting"></h2>
+
+    <ul class="link-list">
+      <li><a href="https://docs.google.com/spreadsheets/d/1leRiYJX8u4bPylvSR-yfzZgi2cxSFBMb5b0P_P59nXA/edit?gid=631812701#gid=631812701" target="_blank">📄 Penomoran Surat Keluar</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1bdNpfI-oZZEuMnNqvi2bsCV1rXcAY5mtXArp706ohx4/edit?gid=1292886763#gid=1292886763" target="_blank">📑 Penomoran Surat Keputusan</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1bdNpfI-oZZEuMnNqvi2bsCV1rXcAY5mtXArp706ohx4/edit?gid=1292886763#gid=1292886763" target="_blank">📃 Penomoran Berita Acara Serah Terima</a></li>
+    </ul>
+
+    <button onclick="logout()">Keluar</button>
+  </div>
+
+  <script>
+    const nama = localStorage.getItem("namaPegawai");
+    if (!nama) {
+      alert("Silakan login terlebih dahulu.");
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("greeting").textContent = "Selamat datang, " + nama + "!";
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+input {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.7rem;
+  width: 80%;
+  font-size: 1rem;
+}
+button {
+  padding: 0.7rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+.error {
+  color: red;
+}
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+.link-list li {
+  margin: 10px 0;
+}
+.link-list a {
+  text-decoration: none;
+  color: #4CAF50;
+}
