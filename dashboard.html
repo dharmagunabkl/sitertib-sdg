@@ -8,30 +8,30 @@
 </head>
 <body>
   <div class="container">
-    <h1>SITERTIB</h1>
-    <p class="tagline">Sistem Penomoran Surat Tertib dan Teratur</p>
-    <h2 id="greeting"></h2>
-
-    <ul class="link-list">
-      <li><a href="https://docs.google.com/spreadsheets/d/1leRiYJX8u4bPylvSR-yfzZgi2cxSFBMb5b0P_P59nXA/edit?gid=631812701#gid=631812701" target="_blank">📄 Penomoran Surat Keluar</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1bdNpfI-oZZEuMnNqvi2bsCV1rXcAY5mtXArp706ohx4/edit?gid=1292886763#gid=1292886763" target="_blank">📑 Penomoran Surat Keputusan</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1bdNpfI-oZZEuMnNqvi2bsCV1rXcAY5mtXArp706ohx4/edit?gid=1292886763#gid=1292886763" target="_blank">📃 Penomoran Berita Acara Serah Terima</a></li>
-    </ul>
-
-    <button onclick="logout()">Keluar</button>
+    <div class="login-box">
+      <img src="logo.png" alt="Logo SITERTIB" class="logo">
+      <h1>SPINTAR</h1>
+      <p class="tagline"> Sistem Penomoran Surat Tertib dan Teratur</p>
+      <h2 id="greeting">Selamat datang!</h2>
+      <ul class="menu">
+        <li><a href="https://docs.google.com/spreadsheets/d/1leRiYJX8u4bPylvSR-yfzZgi2cxSFBMb5b0P_P59nXA/edit?gid=631812701#gid=631812701" target="_blank"> Penomoran Surat Keluar</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1bdNpfI-oZZEuMnNqvi2bsCV1rXcAY5mtXArp706ohx4/edit?sharingaction=ownershiptransfer&gid=1292886763#gid=1292886763" target="_blank"> Penomoran Surat Keputusan</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1bdNpfI-oZZEuMnNqvi2bsCV1rXcAY5mtXArp706ohx4/edit?sharingaction=ownershiptransfer&gid=1292886763#gid=1292886763 " target="_blank"> Penomoran Berita Acara Serah Terima</a></li>
+      </ul>
+      <button onclick="logout()">Keluar</button>
+    </div>
   </div>
-
   <script>
     const nama = localStorage.getItem("namaPegawai");
     if (!nama) {
       alert("Silakan login terlebih dahulu.");
       window.location.href = "index.html";
     } else {
-      document.getElementById("greeting").textContent = "Selamat datang, " + nama + "!";
+      document.getElementById("greeting").innerText = `Selamat datang, ${nama}!`;
     }
 
     function logout() {
-      localStorage.clear();
+      localStorage.removeItem("namaPegawai");
       window.location.href = "index.html";
     }
   </script>
